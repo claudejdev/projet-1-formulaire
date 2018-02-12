@@ -18,6 +18,24 @@
       <p>Les champs obligatoires sont suivis par <strong><abbr title="obligatoire">*</abbr></strong>.</p>
 
       <section>
+        <fieldset>
+          <legend>Genre</legend>
+          <ul>
+            <li>
+              <label for="genre_m">
+      <input type="radio" id="genre_h" name="genre" value="monsieur" required />
+      Monsieur
+      </label>
+            </li>
+            <li>
+              <label for="genre_f">
+      <input type="radio" id="genre_f" name="genre" value="madame" required />
+      Madame
+      </label>
+            </li>
+          </ul>
+        </fieldset>
+
         <p>
           <label for="prenom">
     <span>Prénom&nbsp;:</span>
@@ -46,58 +64,44 @@
               <strong><abbr title="obligatoire">*</abbr></strong>
               </label>
         </p>
+      </section>
+
+      <section>
         <fieldset>
-          <legend>Titre</legend>
+          <legend>Sujet</legend>
           <ul>
             <li>
-              <label for="titre_1">
-      <input type="radio" id="titre_1" name="titre" value="M." />
-      Monsieur
-      </label>
+              <label for="sujet_1">
+    <input type="radio" id="sujet_1" name="sujet_1" value="soucis_materiel" />
+    Soucis avec le matériel
+    </label>
             </li>
             <li>
-              <label for="titre_2">
-      <input type="radio" id="titre_2" name="titre" value="Mme" />
-      Madame
-      </label>
+              <label for="sujet_2">
+    <input type="radio" id="sujet_2" name="sujet_2" value="soucis_montage" />
+    Soucis avec le montage
+    </label>
+              <label for="sujet_2">
+    <input type="radio" id="sujet_3" name="sujet_3" value="soucis_fonctionnement" />
+    Soucis de fonctionnement
+    </label>
             </li>
           </ul>
         </fieldset>
-      </section>
+        <p>
+          <label for="message">
+  <span>Message&nbsp;:</span>
+  <input type="text" id="message" name="messagetechnique" required/>
+  <strong><abbr title="obligatoire">*</abbr></strong>
+  </label>
+        </p>
 
-      <section>
-        <h2>Information de paiement</h2>
-
-        <p>
-          <label for="carte">
-    <span>Type de carte&nbsp;:</span>
-    <select id="card" name="carteutilisateur">
-      <option value="visa">Visa</option>
-      <option value="mc">Mastercard</option>
-      <option value="amex">American Express</option>
-    </select>
-    </label>
-        </p>
-        <p>
-          <label for="numero">
-    <span>Numéro de la carte&nbsp;:</span>
-    <input type="text" id="numero" name="numerocarte" required />
-    <strong><abbr title="obligatoire">*</abbr></strong>
-    </label>
-        </p>
-        <p>
-          <label for="date">
-    <span>Date d'expiration&nbsp;:</span>
-    <input type="text" id="date" name="expiration" required />
-    <strong><abbr title="obligatoire">*</abbr></strong>
-    <em>au format mm/aa</em>
-    </label>
-        </p>
       </section>
 
       <section>
         <p>
-          <button>Confirmer le paiement</button>
+          <button>Envois du formulaire</button>
+          <!-- Verbose -->
         </p>
       </section>
     </form>
