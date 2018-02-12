@@ -1,6 +1,3 @@
-# Projet: Formulaire
-De une à deux semaines selon la vitesse des octocats.
-
 ## Compétences travaillées
 - groupe: Maitriser Git (renforcement)
 - frontend: css frameworks (initiation)
