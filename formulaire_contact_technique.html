@@ -18,28 +18,30 @@
       <p>Les champs obligatoires sont suivis par <strong><abbr title="obligatoire">*</abbr></strong>.</p>
 
       <section>
-        <fieldset>
+        <!-- <fieldset> -->
           <legend>Genre</legend>
           <ul>
             <li>
               <label for="genre_m">
-      <input type="radio" id="genre_h" name="genre" value="monsieur" required />
+      <input type="radio" id="genre_h" name="genre" value="monsieur" required autofocus />
       Monsieur
+      <strong><abbr title="obligatoire">*</abbr></strong>
       </label>
             </li>
             <li>
               <label for="genre_f">
       <input type="radio" id="genre_f" name="genre" value="madame" required />
       Madame
+      <strong><abbr title="obligatoire">*</abbr></strong>
       </label>
             </li>
           </ul>
-        </fieldset>
+        <!-- </fieldset> -->
 
         <p>
           <label for="prenom">
     <span>Prénom&nbsp;:</span>
-    <input type="text" id="prenom" name="prenomdutilisateur" required autofocus/>
+    <input type="text" id="prenom" name="prenomdutilisateur" required />
     <strong><abbr title="obligatoire">*</abbr></strong>
     </label>
         </p>
@@ -53,21 +55,20 @@
         <p>
           <label for="email">
     <span>Email&nbsp;:</span>
-    <input type="email" id="email" name="emailutilisateur" required />
+    <input type="email" id="email" name="emailutilisateur" placeholder="exemple@domaine.com" required />
     <strong><abbr title="required">*</abbr></strong>
     </label>
         </p>
         <p>
           <label for="pays">
               <span>Pays&nbsp;:</span>
-              <input type="text" id="pays" name="paysutilisateur" required />
+              <input type="text" id="pays" name="paysutilisateur" placeholder="Belgique..." required />
               <strong><abbr title="obligatoire">*</abbr></strong>
               </label>
         </p>
       </section>
 
       <section>
-        <fieldset>
           <legend>Sujet</legend>
           <ul>
             <li>
@@ -91,7 +92,7 @@
         <p>
           <label for="message">
   <span>Message&nbsp;:</span>
-  <input type="text" id="message" name="messagetechnique" required/>
+  <input type="text" id="message" name="messagetechnique" placeholder="Entrez votre texte ici..." required/>
   <strong><abbr title="obligatoire">*</abbr></strong>
   </label>
         </p>
