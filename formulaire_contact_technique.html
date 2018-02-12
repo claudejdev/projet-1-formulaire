@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Formulaire de contact du service technique</title>
+</head>
+
+<body>
+  <header>
+    <h1>Formulaire de contact du service technique - Hackers Poulette ™</h1>
+    <img src="images/hackers-poulette-logo.png" alt="Logo de Hackers Poulette ™">
+  </header>
+  <main class="formulaire">
+    <form action="AJOUTER_LIEN_RESULTAT" method="post">
+      <p>Les champs obligatoires sont suivis par <strong><abbr title="obligatoire">*</abbr></strong>.</p>
+
+      <section>
+        <p>
+          <label for="prenom">
+    <span>Prénom&nbsp;:</span>
+    <input type="text" id="prenom" name="prenomdutilisateur" required autofocus/>
+    <strong><abbr title="obligatoire">*</abbr></strong>
+    </label>
+        </p>
+        <p>
+          <label for="nom">
+              <span>Nom&nbsp;:</span>
+              <input type="text" id="nom" name="nomdutilisateur" required />
+              <strong><abbr title="obligatoire">*</abbr></strong>
+              </label>
+        </p>
+        <p>
+          <label for="email">
+    <span>Email&nbsp;:</span>
+    <input type="email" id="email" name="emailutilisateur" required />
+    <strong><abbr title="required">*</abbr></strong>
+    </label>
+        </p>
+        <p>
+          <label for="pays">
+              <span>Pays&nbsp;:</span>
+              <input type="text" id="pays" name="paysutilisateur" required />
+              <strong><abbr title="obligatoire">*</abbr></strong>
+              </label>
+        </p>
+        <fieldset>
+          <legend>Titre</legend>
+          <ul>
+            <li>
+              <label for="titre_1">
+      <input type="radio" id="titre_1" name="titre" value="M." />
+      Monsieur
+      </label>
+            </li>
+            <li>
+              <label for="titre_2">
+      <input type="radio" id="titre_2" name="titre" value="Mme" />
+      Madame
+      </label>
+            </li>
+          </ul>
+        </fieldset>
+      </section>
+
+      <section>
+        <h2>Information de paiement</h2>
+
+        <p>
+          <label for="carte">
+    <span>Type de carte&nbsp;:</span>
+    <select id="card" name="carteutilisateur">
+      <option value="visa">Visa</option>
+      <option value="mc">Mastercard</option>
+      <option value="amex">American Express</option>
+    </select>
+    </label>
+        </p>
+        <p>
+          <label for="numero">
+    <span>Numéro de la carte&nbsp;:</span>
+    <input type="text" id="numero" name="numerocarte" required />
+    <strong><abbr title="obligatoire">*</abbr></strong>
+    </label>
+        </p>
+        <p>
+          <label for="date">
+    <span>Date d'expiration&nbsp;:</span>
+    <input type="text" id="date" name="expiration" required />
+    <strong><abbr title="obligatoire">*</abbr></strong>
+    <em>au format mm/aa</em>
+    </label>
+        </p>
+      </section>
+
+      <section>
+        <p>
+          <button>Confirmer le paiement</button>
+        </p>
+      </section>
+    </form>
+  </main>
+  <footer>Cf. Ligue Braille</footer>
+</body>
+
+</html>
