@@ -15,49 +15,221 @@ couleurs: #15c5bd + #FFF + #303030
     font-style: normal;
 
 }
+
 body {
-  /* display: flex;
-  height: 100vh;
-  margin: 10px; */
+  font-family: 'bellotaregular', georgia;
+  font-size: 25px;
+  color: rgba(255, 255, 255, 1);
   background-color: #15c5bd;
+  background-image: -webkit-radial-gradient(#FFF, #15c5bd, #303030);
+  background-image: -o-radial-gradient(#FFF, #15c5bd, #303030);
+  background-image: radial-gradient(#FFF, #15c5bd, #303030);
+  text-align: center;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  perspective: 600px;
 }
-.page {
-  font-family: 'bellotaregular';
-  background-color: #FFF;
-  display: grid;
-  /*grid-template-columns: 80% 20%;*/
-  grid-template-rows: auto auto auto;
-  margin: auto;
-  width: 60%;
-  font-size: 1em;
-  padding: 40px;
-  border: 5px solid #303030;
-  border-radius: 10px;
-  box-shadow: 2px 4px 3px black;
-  }
-.tete {
+
+#contact-form {
+  -webkit-transform: rotateX(7deg);
+  -moz-transform: rotateX(7deg);
+  -o-transform: rotateX(7deg);
+  transform: rotateX(7deg);
+  position:relative;
+  /* max-width: 90%;
+  margin: 0 auto; */
+  margin:50px auto;
+  width:45%;
+  min-height:200px;
+  z-index:100;
+  padding:30px;
+  border:1px solid #383838;
+  /* My stipped background */
+  background: #D1D1D1;
+  /* Old browsers */
+  background: -moz-repeating-linear-gradient(-45deg, #15c5bd, #15c5bd 30px, #F2F2F2 30px, #F2F2F2 40px, #303030 40px, #303030 70px, #F2F2F2 70px, #F2F2F2 80px);
+  /* FF3.6+ */
+  background: -webkit-repeating-linear-gradient(-45deg, #15c5bd, #15c5bd 30px, #F2F2F2 30px, #F2F2F2 40px, #303030 40px, #303030 70px, #F2F2F2 70px, #F2F2F2 80px);
+  /* FF3.6+ */
+  background: -o-repeating-linear-gradient(-45deg, #15c5bd, #15c5bd 30px, #F2F2F2 30px, #F2F2F2 40px, #303030 40px, #303030 70px, #F2F2F2 70px, #F2F2F2 80px);
+  /* FF3.6+ */
+  background: repeating-linear-gradient(-45deg, #15c5bd, #15c5bd 30px, #F2F2F2 30px, #F2F2F2 40px, #303030 40px, #303030 70px, #F2F2F2 70px, #F2F2F2 80px);
+  /* FF3.6+ */
+  /*border-radius*/
+  -webkit-border-radius:8px;
+  -moz-border-radius:8px;
+  border-radius:8px;
+  /*box-shadow*/
+  -webkit-box-shadow:0px 1px 6px #3F3F3F;
+  -moz-box-shadow:0px 1px 6px #3F3F3F;
+  box-shadow:0px 1px 6px #3F3F3F;
 }
-.infos {
+
+/** my "fake" background that will hover the stripes **/
+#contact-form:after {
+    background:#303030;
+    margin:10px;
+    position: absolute;
+    content :" ";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    border:1px #E5E5E5 solid;
+    /*border-radius*/
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
 }
-.photo {
+
+label {
+  font-weight: 400;
+  cursor: pointer;
+}
+
+textarea,
+input {
+  border: none;
+  outline: none;
+  border-radius: 0;
+  text-align: center;
+  background: none;
+  font-weight: 700;
+  font-family: 'Lato', georgia;
+  font-size: 25px;
+  color: rgba(255, 255, 255, 1);
+  max-width: 90%;
+  padding: 1rem;
+  border: 2px dashed rgba(255, 255, 255, 0);
+  box-sizing: border-box;
+  cursor: text;
+}
+
+textarea {
+  text-align: left;
+  /* overflow:hidden; */
+
+  resize: none;
+  width: 90%;
+  border-color: rgba(255, 255, 255, 0)
+}
+
+textarea:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px dashed rgba(255, 255, 255, 1);
+}
+
+textarea:focus:required:valid {
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+textarea:required:valid {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+input {
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+}
+
+input:required,
+textarea:required {
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+}
+
+input:focus {
+  border-bottom: 2px dashed rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+input:required:valid {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+input:required:invalid {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-weight: 400;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-weight: 400;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-weight: 400;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.expanding {
+  vertical-align: top;
+}
+
+.send-icn {
+  fill: rgba(255, 255, 255, 1)
+}
+
+.send-icn:hover {
+  fill: rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  margin: 2vmax;
+}
+
+button:hover small {
+  opacity: 1;
+}
+
+small {
+  display: block;
+  opacity: 0;
+}
+
+.website {
+  opacity: 1;
+  font-size: 16px;
+  color: #303030;
+  position: relative;
+  text-align: center;
+  display: block;
+  margin-top: 7%;
+
+}
+
+.website a {
+  color: #15c5bd;
 }
 #logo {
   border-radius: 15px 50px;
-  background-color: ;
+  /* background-color: #F2F2F2; */
   padding: 20px;
   width: 300px;
   height: 250px;
-}
-form {
-
-  /*color: #FFF; */
-  padding: 20px;
-}
-abbr {
-  color: red;
-}
-li{
-  list-style-type: none;
-  /*text-align: center;
-  justify-content: space-between;*/
 }
