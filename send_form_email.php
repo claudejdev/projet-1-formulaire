@@ -86,10 +86,39 @@ $headers = 'From: '.$email_from."\r\n".
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers);
 ?>
-
 <!-- include your own success html here -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="stylesheet" href="formulaire_style.css" charset="utf-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FormSvTechnique</title>
+</head>
+<body>
+<div id="contact_form">
+<p>Cher <?php echo $first_name ?>,</p>
+<p>Merci de nous avoir écrit.<br />On te répond très vite.</p>
+<p>Hackers Poulette</p></p>
+<p>
+  <!-- TODO : inverser le sens de la flèche ou trouver un autre icône -->
+  <button form="contactform"  name="submit_button" type="submit" value="Submit">
+    <svg version="1.1" class="send-icn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="36px" viewBox="0 0 100 36" enable-background="new 0 0 100 36" xml:space="preserve">
+      <path d="M100,0L100,0 M23.8,7.1L100,0L40.9,36l-4.7-7.5L22,34.8l-4-11L0,30.5L16.4,8.7l5.4,15L23,7L23.8,7.1z M16.8,20.4l-1.5-4.3
+l-5.1,6.7L16.8,20.4z M34.4,25.4l-8.1-13.1L25,29.6L34.4,25.4z M35.2,13.2l8.1,13.1L70,9.9L35.2,13.2z" />
+    </svg>
+    <small>Envoi</small>
+  </button>
+</p>
+<p>
+  <img id="logo" src="images/hackers-poulette-logo.png" alt="Logo de Hackers Poulette ™"/>
+</p>
+</div>
 
-Merci de nous avoir écrit. On te répond très vite.
+<small class='website'>Cette page répond aux normes d'accessibilité <a href='http://www.w3.org' target='_blank'><abbr title="World Wide Web Consortium">W3C</abbr></a></small>
+</body>
+</html>
 
 <?php
 

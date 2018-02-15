@@ -1,7 +1,8 @@
 /*
 font: https://www.fontsquirrel.com/fonts/
 couleurs: #15c5bd + #FFF + #303030
-  class="img-thumbnail"
+Quick Minimal Contact Form by Honglio : https://codepen.io/honglio/pen/GKgil/
+Quick Minimal Contact Form by  Erlen : https://codepen.io/erlenmasson/pen/azVZXQ/
 */
 @font-face {
     font-family: 'bellotaregular';
@@ -30,7 +31,7 @@ body {
   perspective: 600px;
 }
 
-#contact-form {
+#contact_form {
   -webkit-transform: rotateX(7deg);
   -moz-transform: rotateX(7deg);
   -o-transform: rotateX(7deg);
@@ -66,7 +67,7 @@ body {
 }
 
 /** my "fake" background that will hover the stripes **/
-#contact-form:after {
+#contact_form:after {
     background:#303030;
     margin:10px;
     position: absolute;
