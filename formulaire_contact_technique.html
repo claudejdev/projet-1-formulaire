@@ -8,12 +8,12 @@
   <title>FormSvTechnique</title>
 </head>
 <body>
-  <form id="contact-form">
+  <form id="contact_form" name="contactform" method="post" action="send_form_email.php">
     <p>Cher Hackers Poulette,</p>
-    <p><label for="you-are">je suis</label> <select id="your-gender" required class="form-control" > <option value="madame" selected="selected">madame</option>
-      <option value="monsieur">monsieur</option> </select> <input type="text" name="your-firstname" id="your-firstname" minlength="3" placeholder="(ton prénom)" required> <input type="text" name="your-lastname" id="your-lastname" minlength="3" placeholder="(ton nom)" required> ,</p>
+    <p><label for="you_are">je suis</label> <select name="gender" id="your_gender" required class="form-control" > <option value="madame" selected="selected">madame</option>
+      <option value="monsieur">monsieur</option> </select> <input type="text" name="firstname" id="your_firstname" minlength="3" placeholder="(ton prénom)" required> <input type="text" name="lastname" id="your_lastname" minlength="3" placeholder="(ton nom)" required> ,</p>
 
-    <p><label for="country">j'habite en/au</label> <select id="country" required class="form-control" >
+    <p><label for="country">j'habite en/au</label> <select name="country" id="your_country" required class="form-control" >
                 <option value="" selected="selected">(choisis un pays dans la liste)</option>
                 <option value="AF">Afghanistan</option>
                 <option value="ZA">Afrique du Sud</option>
@@ -273,22 +273,22 @@
                 </select>,</p>
 
     <p>mon
-      <label for="email">adresse email</label> est
-      <input type="email" name="your-email" id="email" placeholder="(ton email)" required>,
+      <label for="your_email">adresse email</label> est
+      <input type="email" name="email" id="your_email" placeholder="(ton email)" required>,
     </p>
 
     <p>j'ai un
-      <label for="your-topic">soucis</label> <input type="checkbox" id="topic" name="topic_1" value="materiel" />de matériel, <input type="checkbox" id="topic" name="topic_2" value="montage" /> de montage, <input type="checkbox" id="topic" name="topic_3" value="fonctionnement" /> de fonctionnement
+      <label for="your_topic">soucis</label> <input type="checkbox" id="topic_1" name="topic" value="materiel" />de matériel, <input type="checkbox" id="topic_2" name="topic" value="montage" /> de montage, <input type="checkbox" id="topic_3" name="topic" value="fonctionnement" /> de fonctionnement
 
   et</p>
 
     <p>
 
     <p>je voudrais
-      <label for="your-message">t'en parler</label> plus en détail: </p>
+      <label for="your_message">t'en parler</label> plus en détail: </p>
 
     <p>
-      <textarea name="your-message" id="your-message" placeholder="(ton message ici)" class="expanding" required></textarea>
+      <textarea name="message" id="your_message" placeholder="(ton message ici)" class="expanding" required></textarea>
     </p>
     <p>
       <button type="submit">
