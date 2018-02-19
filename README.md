@@ -1,3 +1,11 @@
+### Review perso :
+- Lacunes dans la sanitization
+- probablement beaucoup de déchets dans le code (copié-collé à peine compris)
+- ma compréhension du PHP est fort limitée (compris le dicaticiel live de vendredi mais encore du mal à saisir les boucles et les fonctions)
+- je n'y ai pas assez consacré de temps et/ou pas assez concentré  
+
+---
+
 ## Compétences travaillées
 - groupe: Maitriser Git (renforcement)
 - frontend: css frameworks (initiation)
