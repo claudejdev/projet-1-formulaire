@@ -1,12 +1,10 @@
-<!-- http://www.freecontactform.com/email_form.php -->
+<!-- Source: http://www.freecontactform.com/email_form.php -->
 
+<!-- Page d'erreur -->
 <?php
 if (isset($_POST['email'])) {
-
-    // EDIT THE 2 LINES BELOW AS REQUIRED
     $email_to = 'claudejanssen.pro@gmail.com';
     $email_subject = 'BeCode - Projet 1 Formulaire';
-
     function died($error)
     {
 ?>
@@ -43,11 +41,11 @@ if (isset($_POST['email'])) {
       <small class='website'>Cette page répond aux normes d'accessibilité <a href='http://www.w3.org' target='_blank'><abbr title="World Wide Web Consortium">W3C</abbr></a></small>
       </body>
       </html>
-<?php
+<!-- Vérif et message de confirmation -->
+	  <?php
         die();
     }
 
-    // validation expected data exists
     if (
         !isset($_POST['gender']) ||
         !isset($_POST['firstname']) ||
@@ -71,28 +69,28 @@ if (isset($_POST['email'])) {
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
 
     if (!preg_match($email_exp, $email_from)) {
-        $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+        $error_message .= 'Ton email ne semble pas valide.<br />';
     }
 
     $string_exp = "/^[a-zA-ZÀ-ÿ .'-]+$/";
-// TODO: add accents
+
   if (!preg_match($string_exp, $first_name)) {
-      $error_message .= 'The First Name you entered does not appear to be valid.<br />';
+      $error_message .= 'Ton prénom ne semble pas valide.<br />';
   }
 
     if (!preg_match($string_exp, $last_name)) {
-        $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
+        $error_message .= 'Ton nom ne semble pas valide.<br />';
     }
 
     if (strlen($your_message) < 2) {
-        $error_message .= 'The Comments you entered do not appear to be valid.<br />';
+        $error_message .= 'Ton commentaire ne semble pas valide.<br />';
     }
 
     if (strlen($error_message) > 0) {
         died($error_message);
     }
 
-    $email_message = "Form details below.\n\n";
+    $email_message = "Détails du formulaire ci-dessous.\n\n";
 
     function clean_string($string)
     {
@@ -109,12 +107,11 @@ if (isset($_POST['email'])) {
     $email_message .= 'Sujet : '.clean_string($your_topic)."\n";
     $email_message .= 'Message : '.clean_string($your_message)."\n";
 
-// create email headers
-$headers = 'From: '.$email_from."\r\n".
-'Reply-To: '.$email_from."\r\n".
+	$headers = 'De : '.$email_from."\r\n".
+'Répondre  à: '.$email_from."\r\n".
 'X-Mailer: PHP/'.phpversion();
     @mail($email_to, $email_subject, $email_message, $headers); ?>
-<!-- include your own success html here -->
+
 <html lang="fr">
 <head>
   <link rel="stylesheet" href="formulaire_style.css" charset="utf-8">
@@ -135,8 +132,8 @@ $headers = 'From: '.$email_from."\r\n".
       <path d="M100,0L100,0 M23.8,7.1L100,0L40.9,36l-4.7-7.5L22,34.8l-4-11L0,30.5L16.4,8.7l5.4,15L23,7L23.8,7.1z M16.8,20.4l-1.5-4.3
 l-5.1,6.7L16.8,20.4z M34.4,25.4l-8.1-13.1L25,29.6L34.4,25.4z M35.2,13.2l8.1,13.1L70,9.9L35.2,13.2z" />
     </svg>
-    <small>Envoi</small>
-  </button>
+		<small><a href="formulaire_contact_technique.php">Retour</a></small>
+	</button>
 </p>
 <p>
   <img id="logo" src="images/hackers-poulette-logo.png" alt="Logo de Hackers Poulette ™"/>
